@@ -1,37 +1,46 @@
 
-var minionOne = document.getElementById("minion1");
-minionOne.addEventListener('click', function() { 
-  startSound('sounds/minionSound1.mp3', 'min1'  ); 
-});
+var minions = document.getElementsByClassName("minion");
 
-var minionTwo = document.getElementById("minion2");
-minionTwo.addEventListener('click', function() { 
-  startSound('sounds/minionSound2.mp3', 'min2'  ); 
-});
+//this was going to assign the event listeners, it works hoewever it addigns the same .mp3 file to each event listener. 
 
-var minionThree = document.getElementById("minion3");
-minionThree.addEventListener('click', function() { 
-  startSound('sounds/minionSound3.mp3', 'min3'  ); 
-});
+// var x = 1;
+// var url;
+// var i;
+// makeMinions();
+// function makeMinions(){
 
-var minionOne = document.getElementById("minion1");
-minionOne.addEventListener('click', function() { 
-  startSound('sounds/minionSound1.mp3', 'min1'  ); 
-});
+//   for (i = 0; i < 8; i++) {
+//     url = 'sounds/minionSound' + i.toString() + '.mp3' ; 
+//     minions[i].addEventListener("click", function(e) {
+//       x++;
+//       startSound(url , minions[i]);
+      
+//     });
+//   }
+// }
+
+minions[0].addEventListener("click", function(e) {startSound('sounds/minionSound1.mp3' , '001'); });
+minions[1].addEventListener("click", function(e) {startSound('sounds/minionSound2.mp3' , '002'); });
+minions[2].addEventListener("click", function(e) {startSound('sounds/minionSound3.mp3' , '003'); });
+minions[3].addEventListener("click", function(e) {startSound('sounds/minionSound4.mp3' , '004'); });
+minions[4].addEventListener("click", function(e) {startSound('sounds/minionSound5.mp3' , '005'); });
+minions[5].addEventListener("click", function(e) {startSound('sounds/minionSound6.mp3' , '006'); });
+minions[6].addEventListener("click", function(e) {startSound('sounds/minionSound7.mp3' , '007'); });
+minions[7].addEventListener("click", function(e) {startSound('sounds/minionSound8.mp3' , '008'); });
+
 
 function startSound(url, ID){
 soundManager.setup({
   url: '/swf/',
   onready: function() {
+
     var mySound = soundManager.createSound({
       id: ID,
-      url: url
+      url: url 
     });
     mySound.play();
+    console.log(ID);
   },
-  ontimeout: function() {
-    // Hrmm, SM2 could not start. Missing SWF? Flash blocked? Show an error, etc.?
-  }
-});
+  ontimeout: function() {} });
 
 }

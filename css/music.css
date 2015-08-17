@@ -1,5 +1,47 @@
 img {
 
-  height: 50px;
-  width: 75px;
+  height: 100px;
+  width: 90px;
+}
+#header{
+  text-align: center;
+}
+
+#headerImg{
+  width: 500px;
+  height: auto;
+}
+#headerRight {
+ display:inline-block;
+}
+.minion {
+  margin-bottom: 5px;
+}
+
+#footer {
+  display: block;
+}
+
+#minionFooter {
+  width: auto;
+  display: inline;
+  text-align: right;
+  float: right;
+  margin-top: 100px;
+}
+
+#minionsContainer{
+  padding-top: 5px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  max-width: 450px;
+  border: solid black 3px;
+}
+#footerLeft {
+  display: inline;
+  float: left;
+  width: 200px;
+  height: 200px;
+
 }
