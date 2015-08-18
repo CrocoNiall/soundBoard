@@ -19,6 +19,8 @@ var minions = document.getElementsByClassName("minion");
 //   }
 // }
 
+// adds event listeners for each item in array, pass the argument 'url' & audio id to the start sound function. 
+
 minions[0].addEventListener("click", function(e) {startSound('sounds/minionSound1.mp3' , '001'); });
 minions[1].addEventListener("click", function(e) {startSound('sounds/minionSound2.mp3' , '002'); });
 minions[2].addEventListener("click", function(e) {startSound('sounds/minionSound3.mp3' , '003'); });
@@ -28,6 +30,7 @@ minions[5].addEventListener("click", function(e) {startSound('sounds/minionSound
 minions[6].addEventListener("click", function(e) {startSound('sounds/minionSound7.mp3' , '007'); });
 minions[7].addEventListener("click", function(e) {startSound('sounds/minionSound8.mp3' , '008'); });
 
+//setup sound manager 
 
 function startSound(url, ID){
 soundManager.setup({
